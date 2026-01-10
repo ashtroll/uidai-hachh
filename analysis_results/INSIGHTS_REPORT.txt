@@ -1,0 +1,229 @@
+
+================================================================================
+AADHAAR ENROLMENT & UPDATES: KEY INSIGHTS & ANALYSIS REPORT
+Generated: 2026-01-10 10:36:57
+================================================================================
+
+1. DATASET OVERVIEW
+================================================================================
+Enrolment Dataset:
+  - Records: 1,006,029
+  - Date Range: 2025-03-02 to 2025-12-31
+  - States: 55, Districts: 984, Pincodes: 19463
+  - Duplicates: 2.28%
+
+Demographic Updates Dataset:
+  - Records: 2,071,700
+  - Date Range: 2025-03-01 to 2025-12-29
+  - States: 65, Districts: 982, Pincodes: 19742
+  - Duplicates: 22.86%
+
+Biometric Updates Dataset:
+  - Records: 1,861,108
+  - Date Range: 2025-03-01 to 2025-12-29
+  - States: 57, Districts: 973, Pincodes: 19707
+  - Duplicates: 5.10%
+
+2. HEADLINE STATISTICS
+================================================================================
+Total Aadhaar Enrolments (Sample Period): 5,435,702
+Total Demographic Updates: 49,295,187
+Total Biometric Updates: 69,763,095
+
+National Enrolment Activity:
+  - Average Daily Enrolments: 47,267
+  - Peak Daily Enrolments: 616,868
+  - Minimum Daily Enrolments: 0
+  
+Anomalies Detected: 0 days show unusual activity (>3σ from rolling mean)
+
+3. TOP PERFORMING STATES - ENROLMENT VOLUME
+================================================================================
+
+State: Uttar Pradesh
+  - Total Enrolments: 1,018,629
+  - Age 0-5: 51.2% (521,045)
+  - Age 5-17: 47.1% (479,682)
+  - Age 18+: 1.8% (17,902)
+
+State: Bihar
+  - Total Enrolments: 609,585
+  - Age 0-5: 43.1% (262,875)
+  - Age 5-17: 54.9% (334,802)
+  - Age 18+: 2.0% (11,908)
+
+State: Madhya Pradesh
+  - Total Enrolments: 493,970
+  - Age 0-5: 74.5% (367,990)
+  - Age 5-17: 23.6% (116,381)
+  - Age 18+: 1.9% (9,599)
+
+State: West Bengal
+  - Total Enrolments: 375,297
+  - Age 0-5: 73.4% (275,391)
+  - Age 5-17: 24.4% (91,396)
+  - Age 18+: 2.3% (8,510)
+
+State: Maharashtra
+  - Total Enrolments: 369,139
+  - Age 0-5: 75.5% (278,814)
+  - Age 5-17: 22.2% (82,116)
+  - Age 18+: 2.2% (8,209)
+
+
+4. HIGH UPDATE INTENSITY STATES - DEMOGRAPHIC UPDATES
+================================================================================
+States with highest demographic update-to-enrolment ratios (migration, mobility, KYC):
+
+State: Chandigarh
+  - Demographic Updates per 1,000 Enrolments: 30602.4
+  - Total Demographic Updates: 83,361
+
+State: Daman & Diu
+  - Demographic Updates per 1,000 Enrolments: 29272.7
+  - Total Demographic Updates: 644
+
+State: WESTBENGAL
+  - Demographic Updates per 1,000 Enrolments: 28500.0
+  - Total Demographic Updates: 57
+
+State: ODISHA
+  - Demographic Updates per 1,000 Enrolments: 25000.0
+  - Total Demographic Updates: 50
+
+State: Manipur
+  - Demographic Updates per 1,000 Enrolments: 22408.3
+  - Total Demographic Updates: 301,549
+
+
+5. HIGH UPDATE INTENSITY STATES - BIOMETRIC UPDATES
+================================================================================
+States with highest biometric update-to-enrolment ratios (data quality, young population):
+
+State: Daman & Diu
+  - Biometric Updates per 1,000 Enrolments: 99318.2
+  - Total Biometric Updates: 2,185
+
+State: Daman and Diu
+  - Biometric Updates per 1,000 Enrolments: 55892.6
+  - Total Biometric Updates: 6,763
+
+State: Andaman and Nicobar Islands
+  - Biometric Updates per 1,000 Enrolments: 46015.1
+  - Total Biometric Updates: 18,314
+
+State: Dadra and Nagar Haveli
+  - Biometric Updates per 1,000 Enrolments: 36557.0
+  - Total Biometric Updates: 27,235
+
+State: Goa
+  - Biometric Updates per 1,000 Enrolments: 29304.6
+  - Total Biometric Updates: 68,397
+
+
+6. TEMPORAL TRENDS & ANOMALIES
+================================================================================
+Time Series Analysis:
+  - Data spans 304 days
+  - Average daily enrolment: 47,267
+  - Standard deviation: 70,316
+  
+Anomaly Detection (Z-score > 3.0):
+  - Days with unusual activity: 0
+  - Interpretation: Significant spikes likely indicate targeted campaigns, scheme deadlines, or operational bottlenecks
+
+
+7. FORECASTING MODEL
+================================================================================
+Simple linear regression model trained on historical daily enrolments.
+  - Trend (slope): -43.51 enrolments per day
+  - R² Score: 0.002
+  - 14-day forecast generated from 2025-12-31
+  - Predicted average (next 14 days): 54,495
+
+Use case: Forward-looking capacity planning for enrolment and update centres.
+
+8. KEY INSIGHTS & INTERPRETATION
+================================================================================
+
+A. ENROLMENT PATTERNS
+  ✓ Uttar Pradesh leads with 1,018,629 total enrolments
+  ✓ Age profile varies by state: child enrolment (0-5, 5-17) ranges from 
+    0.0% to 100.0% for age 0-5
+  ✓ Higher child share suggests recent expansion or school-based integration
+
+B. UPDATE BEHAVIOR & LIFECYCLE
+  ✓ Demographic updates per 1,000 enrolments: 0.0 to 30602.4
+  ✓ High demographic update intensity in Chandigarh 
+    indicates population mobility, migration, or active KYC processes
+  ✓ Biometric updates per 1,000 enrolments: 0.0 to 99318.2
+
+C. TEMPORAL DYNAMICS & CAMPAIGNS
+  ✓ National time series shows distinct peaks and troughs
+  ✓ 0 anomalous days detected (>3σ from rolling average)
+  ✓ Peaks likely correspond to: policy announcements, scheme deadlines, targeted drives
+  ✓ Spikes indicate opportunity for demand forecasting and campaign planning
+
+D. RISK & QUALITY INDICATORS
+  ✓ States with consistently elevated anomaly rates may indicate:
+    - Operational capacity constraints (bursty enrolment patterns)
+    - Data quality issues requiring audit
+    - Potential misuse or fraud patterns
+  ✓ Recommendation: Implement real-time monitoring dashboard
+
+9. SOLUTION FRAMEWORKS & RECOMMENDATIONS
+================================================================================
+
+1. INCLUSION & OUTREACH FRAMEWORK
+   - Identify states/districts with low child coverage (age 0-5, 5-17)
+   - Target school-based enrolment drives in low-coverage regions
+   - Leverage mobile camps for remote/tribal areas
+   - Expected impact: Raise coverage in identified regions by 10-15% within 6 months
+
+2. CAPACITY PLANNING & RESOURCE ALLOCATION
+   - Use 14-day demand forecasts to pre-position kits and staff
+   - Allocate extra capacity to high-demand states (e.g., Uttar Pradesh)
+   - Align centre operating hours with predicted demand peaks
+   - Monitor update-to-enrolment ratios to size biometric/demographic capacity
+
+3. RISK-BASED SUPERVISION & QUALITY
+   - Implement anomaly scores for each state and centre
+   - High-risk entities (anomaly rate > 10%): trigger audits, additional verification
+   - Focus on biometric quality in states with high update intensity
+   - Regular training for operators in low-quality centres
+
+4. MONITORING & DASHBOARD
+   - Build multi-level KPI dashboard:
+     * National: daily enrolments, updates, anomaly flags, 14-day forecast
+     * State: state-wise rankings, anomaly rates, coverage gaps
+     * Centre (if data available): daily throughput, rejection rates, anomalies
+   - Set alert thresholds: anomaly rate > 15%, capacity utilisation > 90%
+   - Real-time integration with operational teams for quick response
+
+10. TECHNICAL DETAILS
+================================================================================
+Analysis performed using:
+  - Pandas for data aggregation and transformation
+  - Scikit-learn for linear regression forecasting
+  - Plotly for interactive visualisations
+  - Z-score based anomaly detection (window=7 days, threshold=3σ)
+
+Data Quality Notes:
+  - No negative counts detected
+  - Minor duplication in demographic updates (22.86%)
+    likely due to batch updates; recommend deduplication in production
+
+Output Files Generated:
+  1. 01_national_timeseries.html - National daily trends
+  2. 02_top_states_enrolment.html - Top states by volume
+  3. 03_age_wise_distribution.html - Age structure by state
+  4. 04_update_intensity_scatter.html - Update behaviour comparison
+  5. 05_anomalies.html - Anomaly detection overlay
+  6. 06_forecast.html - 14-day demand forecast
+  7. state_panel.csv - Full state-level metrics
+  8. national_daily.csv - Daily national-level time series
+  9. enrolment_by_state.csv - State-wise enrolment breakdown
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+*.log
+
+# Raw UIDAI archives
+api_data_aadhar_*.zip
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
