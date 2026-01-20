@@ -14,7 +14,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # ==================== SETUP ====================
-BASE_DIR = Path(r"c:/Users/msi/Desktop/uidai")
+BASE_DIR = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 enrol_dir = BASE_DIR / "api_data_aadhar_enrolment" / "api_data_aadhar_enrolment"
 demo_dir = BASE_DIR / "api_data_aadhar_demographic" / "api_data_aadhar_demographic"
 bio_dir = BASE_DIR / "api_data_aadhar_biometric" / "api_data_aadhar_biometric"
@@ -46,6 +46,15 @@ def parse_common_fields(df: pd.DataFrame) -> pd.DataFrame:
             df[col] = df[col].astype(str).str.strip()
     if "pincode" in df.columns:
         df["pincode"] = df["pincode"].astype(str).str.zfill(6)
+    
+    # CLEANING: Remove duplicates
+    df = df.drop_duplicates()
+    
+    # CLEANING: Handle negative values (clip to 0)
+    numeric_cols = df.select_dtypes(include=[np.number]).columns
+    for col in numeric_cols:
+        df[col] = df[col].clip(lower=0)
+        
     return df
 
 print("\n[1/15] Loading datasets...")
@@ -59,12 +68,12 @@ print(f"  Biometric: {len(bio):,} rows | {bio['date'].min().date()} to {bio['dat
 
 # ==================== DATA QUALITY CHECKS ====================
 print("\n[2/15] Data quality checks...")
-print(f"  Enrolment - Duplicates: {enrol[['date', 'state', 'district', 'pincode']].duplicated().mean():.2%}")
-print(f"  Demographic - Duplicates: {demo[['date', 'state', 'district', 'pincode']].duplicated().mean():.2%}")
-print(f"  Biometric - Duplicates: {bio[['date', 'state', 'district', 'pincode']].duplicated().mean():.2%}")
-print(f"  Enrolment - Negative counts: {(enrol[['age_0_5', 'age_5_17', 'age_18_greater']] < 0).sum().sum()}")
-print(f"  Demographic - Negative counts: {(demo[['demo_age_5_17', 'demo_age_17_']] < 0).sum().sum()}")
-print(f"  Biometric - Negative counts: {(bio[['bio_age_5_17', 'bio_age_17_']] < 0).sum().sum()}")
+print(f"  Enrolment - Duplicates remaining: {enrol[['date', 'state', 'district', 'pincode']].duplicated().sum()}")
+print(f"  Demographic - Duplicates remaining: {demo[['date', 'state', 'district', 'pincode']].duplicated().sum()}")
+print(f"  Biometric - Duplicates remaining: {bio[['date', 'state', 'district', 'pincode']].duplicated().sum()}")
+print(f"  Enrolment - Negative counts remaining: {(enrol[['age_0_5', 'age_5_17', 'age_18_greater']] < 0).sum().sum()}")
+print(f"  Demographic - Negative counts remaining: {(demo[['demo_age_5_17', 'demo_age_17_']] < 0).sum().sum()}")
+print(f"  Biometric - Negative counts remaining: {(bio[['bio_age_5_17', 'bio_age_17_']] < 0).sum().sum()}")
 
 # ==================== ENROLMENT AGGREGATES ====================
 print("\n[3/15] Aggregating enrolment data...")
